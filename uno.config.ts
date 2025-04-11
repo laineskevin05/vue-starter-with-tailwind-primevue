@@ -6,8 +6,10 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
+  // presetUno,
   presetWebFonts,
+  // presetWind3,
+  presetWind4,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -18,17 +20,23 @@ export default defineConfig({
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
   ],
   presets: [
-    presetUno(),
+    // presetUno(),
+    presetWind4(),
     presetAttributify(),
     presetIcons({
-      scale: 1.2,
+      // scale: 1.2,
     }),
     presetTypography(),
     presetWebFonts({
+      // fonts: {
+      //   sans: 'DM Sans',
+      //   serif: 'DM Serif Display',
+      //   mono: 'DM Mono',
+      // },
+      provider: 'google',
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
+        sans: 'Roboto',
+        mono: ['Fira Code', 'Fira Mono:400,700'],
       },
       processors: createLocalFontProcessor(),
     }),
@@ -37,5 +45,8 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: [...'prose prose-sm m-auto text-left'.split(' ')],
+  blocklist: [
+    /^p-/, // para clases de PrimeVue que comienzan con "p-"
+  ],
 })

@@ -27,3 +27,53 @@ html.dark {
   width: 100%;
   height: 2px;
 }
+
+/* [class^="p-"]{
+  font-size: 10px;
+}
+[class^="p-"] *{
+  font-size: 10px;
+}
+* {
+  font-size: 10px;
+
+} */
+/*
+html {
+    font-size: 10px;
+} */
+
+:root {
+  --rem-base: 14px;
+  font-size: var(--rem-base) !important;
+  line-height: normal;
+  font-family:
+    Inter var,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  /* font-feature-settings: 'liga' 1, 'calt' 1;  */
+  /* fix for Chrome */
+
+  zoom: 0.8;
+
+  text-size-adjust: 100%;
+  font-variation-settings: normal;
+}
+/* @supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+} */
+*,
+:after,
+:before {
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+}

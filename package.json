@@ -17,11 +17,13 @@
     "sizecheck": "npx vite-bundle-visualizer"
   },
   "dependencies": {
+    "@primeuix/themes": "catalog:frontend",
     "@unhead/vue": "catalog:frontend",
     "@unocss/reset": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",
     "nprogress": "catalog:frontend",
     "pinia": "catalog:frontend",
+    "primevue": "catalog:frontend",
     "vue": "catalog:frontend",
     "vue-i18n": "catalog:frontend",
     "vue-router": "catalog:frontend"
